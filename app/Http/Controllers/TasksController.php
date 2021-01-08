@@ -92,7 +92,7 @@ class TasksController extends Controller
     {
         $task = Task::findOrFail($id);
         
-        $task->content = $task->content;
+        $task->content = $request->content;
         $task->save();
 
         // トップページへリダイレクトさせる
